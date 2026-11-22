@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>VAULTFALL: One Night at the Meridian Museum</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0a0a12; color: #e8e4d8;
+    font-family: Georgia, 'Times New Roman', serif; }
+  body { display: flex; flex-direction: column; }
+  #hud { display: flex; align-items: center; gap: 18px; padding: 8px 14px;
+    background: #14141f; border-bottom: 2px solid #3a2f5a; font-size: 15px; flex-wrap: wrap; }
+  #hud .title { font-weight: bold; letter-spacing: 2px; color: #ffd76a; font-size: 17px; }
+  #hud .stat b { color: #ffd76a; }
+  #alarmWrap { display: flex; align-items: center; gap: 8px; }
+  #alarmLabel { font-weight: bold; letter-spacing: 1px; }
+  #alarmBar { width: 220px; height: 16px; background: #2a2a35; border: 1px solid #555; border-radius: 3px; overflow: hidden; }
+  #alarmFill { height: 100%; width: 0%; background: #37c978; transition: width 0.15s linear; }
+  #alarmFill.warn { background: #e8b93a; }
+  #alarmFill.hot { background: #e84a3a; animation: pulse 0.5s infinite alternate; }
+  @keyframes pulse { from { filter: brightness(1); } to { filter: brightness(1.7); } }
+  #tools span { margin-right: 10px; }
+  #wrap { position: relative; flex: 1; min-height: 0; }
+  #game { display: block; width: 100%; height: 100%; touch-action: none; background: #0d0d18; }
+  #msg { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+    background: rgba(10, 10, 18, 0.85); border: 1px solid #6a5a9a; border-radius: 6px;
+    padding: 6px 14px; font-size: 15px; pointer-events: none; white-space: nowrap; }
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="hud">
+  <span class="title">VAULTFALL</span>
+  <span class="stat">Night <b id="hudNight">1</b> / 3</span>
+  <span id="alarmWrap"><span id="alarmLabel">ALARM</span><span id="alarmBar"><span id="alarmFill"></span></span><b id="alarmPct">0%</b></span>
+  <span class="stat">Loot <b id="hudLoot">$0</b></span>
+  <span class="stat">Time <b id="hudTime">0:00</b></span>
+  <span id="tools" class="stat">
+    <span>EMP <b id="hudEmp">2</b> [1]</span>
+    <span>Decoy <b id="hudDecoy">3</b> [2]</span>
+    <span>Lockpick <b id="hudPick">2</b> [3]</span>
+  </span>
+  <span class="stat" id="hudHint">WASD move &middot; Shift run &middot; E grab &middot; 1/2/3 tools &middot; P pause &middot; R restart</span>
+</div>
+<div id="wrap">
+  <canvas id="game" width="960" height="600" aria-label="VAULTFALL: a top-down stealth heist. Sneak past guards and cameras, crack the vault, and escape with the loot."></canvas>
+  <div id="msg"></div>
+</div>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
