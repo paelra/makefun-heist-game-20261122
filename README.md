@@ -1,8 +1,8 @@
 # VAULTFALL: One Night at the Meridian Museum
 
-[![make.fun](https://make.fun/c/best-heist-game-20261122-0559/badge.svg)](https://make.fun/c/best-heist-game-20261122-0559)
-[![make.fun entry](https://make.fun/c/best-heist-game-20261122-0559/entry.svg)](https://make.fun/c/best-heist-game-20261122-0559)
-[![make.fun rank](https://make.fun/c/best-heist-game-20261122-0559/rank.svg)](https://make.fun/c/best-heist-game-20261122-0559)
+[![make.fun](https://make.fun/badge/best-heist-game-20261122-0559.svg)](https://make.fun/c/best-heist-game-20261122-0559)
+[![rank](https://make.fun/badge/best-heist-game-20261122-0559/paelra/makefun-heist-game-20261122/rank.svg)](https://make.fun/c/best-heist-game-20261122-0559)
+[![reward](https://make.fun/badge/best-heist-game-20261122-0559/paelra/makefun-heist-game-20261122/reward.svg)](https://make.fun/c/best-heist-game-20261122-0559)
 
 A complete, original, fully offline top-down stealth heist game. You are a
 thief crossing the Meridian Museum at night: sneak past patrolling guards and
